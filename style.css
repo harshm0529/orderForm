@@ -35,8 +35,19 @@ h3 {
     margin: 50px auto 0;
 }
 
-.brand-name h2 {
+.formimg{
+    margin-right: 14px;
+    border-radius: 51px;
+}
+
+.brand-name{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     border-bottom: 1px solid;
+}
+
+.brand-name h2 {
     padding: 15px;
     font-weight: 700;
     margin-bottom: 0 !important
