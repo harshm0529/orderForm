@@ -5,7 +5,7 @@ const fromToForm = document.querySelector("#fromToForm");
 const username = document.querySelector("#username");
 const address = document.querySelector("#address");
 const mob = document.querySelector("#mob");
-const orderid = document.querySelector("#orderid");
+// const orderid = document.querySelector("#orderid");
 const orderDate = document.querySelector("#orderDate");
 const orderPrice = document.querySelector("#orderPrice");
 
@@ -106,7 +106,7 @@ function editForm(ele) {
     username.readOnly = false;
     address.readOnly = false;
     mob.readOnly = false;
-    orderid.readOnly = false;
+    // orderid.readOnly = false;
     orderDate.readOnly = false;
     orderPrice.readOnly = false;
     ordertype.removeAttribute('style');
@@ -139,8 +139,8 @@ function genratePdf(data) {
                     <p class="f-700 cust-name mt-3 mb-2">${data.username}</p>
 
                     <p class="mb-10 address"><span class="f-700">Address : </span>${data.address}</p>
+                    <p class="mb-10"><span class="f-700">Contact : </span>${data.mob}</p>
 
-                    <p class="c-number f-700">Contact Number : ${data.mob}</p>
                 </div>
                 <div class="col-6">
                     <p class="f-700 mt-3 mb-2">FOR SELLER</p>
@@ -171,7 +171,7 @@ function genratePdf(data) {
             <p class="return-text"><span class="f-700">Return Address : </span>B-15 Om Ganesh CHS No 14, Nilkanth
                 Nagar,
                 Kandivali West, Mumbai | PIN: 400067</p>
-            <p class="f-700">Contact no : <span>+91 8657358985</span></p>
+            <p class="mb-0"><span class="f-700">Contact : </span>+91 8657358985</p>
         </div>
     </div>
 </div>
@@ -257,7 +257,7 @@ function afterSubmit(e) {
     username.readOnly = true;
     address.readOnly = true;
     mob.readOnly = true;
-    orderid.readOnly = true;
+    // orderid.readOnly = true;
     orderDate.readOnly = true;
     orderPrice.readOnly = true;
     ordertype.style.pointerEvents = 'none';
