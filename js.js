@@ -330,8 +330,3 @@ function openTabs(el) {
 
   btnTarget.classList.add("active");
 }
-
-{/*        <div class="col-6">
-                            <p class="mb-0">ORDER ID</p>
-                            <p>${data.orderid}</p>
-                        </div> */}
