@@ -132,6 +132,7 @@ function genratePdf(data) {
     <div class="pdf-form" id="pdfFormGenrate">
         <div class="brand-name">
             <h2>Womanhood</h2>
+            <img src="logo.jpg" alt="" class="formimg" height="50">
         </div>
         <div class="container">
             <div class="row">
@@ -163,7 +164,7 @@ function genratePdf(data) {
             <tr>
                 <td>${data.productname}</td>
                 <td>${data.qty}</td>
-                <td><span>Rs.</span>${data.orderPrice}<span>.0</span></td>
+                <td><span>Rs.</span>${data.orderPrice}<span>0</span></td>
             </tr>
         </table>
         <div class="dec">
