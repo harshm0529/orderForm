@@ -164,7 +164,7 @@ function genratePdf(data) {
             <tr>
                 <td>${data.productname}</td>
                 <td>${data.qty}</td>
-                <td><span>Rs.</span>${data.orderPrice}<span>0</span></td>
+                <td><span>Rs.</span>${data.orderPrice}<span>.0</span></td>
             </tr>
         </table>
         <div class="dec">
@@ -330,3 +330,8 @@ function openTabs(el) {
 
   btnTarget.classList.add("active");
 }
+
+{/*        <div class="col-6">
+                            <p class="mb-0">ORDER ID</p>
+                            <p>${data.orderid}</p>
+                        </div> */}
