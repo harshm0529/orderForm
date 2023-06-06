@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" type="image/x-icon" href="./img/logo.jpg">
+    <title>Womanhood order form</title>
+</head>
+
+<body>
+
+
+    <section id="wrapper">
+        <div class="content">
+            <!-- Tab links -->
+            <div class="tabs">
+                <a href="#/" class="tablinks active" data-country="tab1">Manual service</a>
+                <a href="#/" class="tablinks" data-country="tab2">Courier service</a>
+            </div>
+
+            <!-- Tab content -->
+            <div class="wrapper_tabcontent">
+                <div id="tab1" class="tabcontent active">
+                    <!-- <h1 class="title">Order Detail</h1> -->
+                    <div class="container mt-3" id="order-input-form">
+                        <form class="row g-3" id="form">
+                            <div class="col-md-4 mb-2">
+                                <label for="username" class="form-label">Name</label>
+                                <input name="username" type="textarea" class="form-control" id="username" autocomplete="off">
+                                <span class="error dsp-none">Enter the name</span>
+                            </div>
+                            <div class="col-md-4 mb-2">
+                                <label for="address" class="form-label">Address</label>
+                                <textarea name="address" class="form-control" id="address" rows="3" autocomplete="off"></textarea>
+                                <span class="error dsp-none">Enter the Address</span>
+                            </div>
+                            <div class="col-md-4 mb-2">
+                                <label for="mob" class="form-label">Contact no</label>
+                                <input name="mob" type="text" class="form-control" id="mob" autocomplete="off"
+                                    onkeypress="return isNumber(event)">
+                                <span class="error dsp-none">Enter the Contact no</span>
+                            </div>
+                            <div class="col-md-6 mb-2">
+                                <label for="orderid" class="form-label">OrderID</label>
+                                <input name="orderid" type="text" class="form-control" id="orderid">
+                                <span class="error dsp-none">Enter the OrderID</span>
+                            </div>
+                            <div class="col-md-3 mb-2">
+                                <label for="orderDate" class="form-label">Order Date</label>
+                                <input name="orderDate" type="date" class="form-control" id="orderDate">
+                                <span class="error dsp-none">Enter the Order Date</span>
+                            </div>
+                            <div class="col-md-3 mb-2">
+                                <label for="orderPrice" class="form-label">Order Price</label>
+                                <input name="orderPrice" type="text" class="form-control" id="orderPrice">
+                                <span class="error dsp-none">Enter Order Price</span>
+                            </div>
+                            <div class="col-md-3 mb-2">
+                                <label for="ordertype" class="form-label">Order Type</label>
+                                <select class="form-select dropdown-value" id="ordertype" name="ordertype">
+                                    <option selected disabled value="">Choose...</option>
+                                    <option>Prepaid</option>
+                                    <option>COD</option>
+                                </select>
+                                <span class="error dsp-none">Enter the Order Type</span>
+                            </div>
+                            <div class="col-md-3 mb-2">
+                                <label for="qty" class="form-label">QTY</label>
+                                <input name="qty" type="text" class="form-control" id="qty">
+                                <span class="error dsp-none">Enter the QTY</span>
+                            </div>
+                            <div class="col-md-3 mb-4">
+                                <label for="productname" class="form-label">Product name</label>
+                                <input name="productname" type="text" class="form-control" id="productname">
+                                <span class="error dsp-none">Enter the Product name</span>
+                            </div>
+                            <div class="col-md-12">
+                                <button class="btn btn-primary col-6 mr-2 submitBtn w-100" type="submit" id="submit"
+                                    disabled>Submit</button>
+                            </div>
+                        </form>
+                        <div class="row mb-3">
+                            <div class="col-6">
+                                <button class="btn btn-success w-100 d-none tab1" id="editFormBtn"
+                                    data-src="editBtnForm" onclick="editForm(this)">Edit</button>
+                            </div>
+                            <div class="col-6">
+                                <button class="btn btn-warning w-100 d-none" id="pdfBtn">PDF</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="pdfGenrateForm"></div>
+                </div>
+
+                <div id="tab2" class="tabcontent">
+                    <form id="fromToForm">
+                        <!-- <h1 class="fromTO">FROM</h1> -->
+                        <div class="container mt-3">
+                            <div class="row g-3">
+                                <div class="col-md-4 mb-3">
+                                    <label for="ftusername" class="form-label">Name</label>
+                                    <input name="ftusername" type="textarea" class="form-control" id="ftusername" autocomplete="off">
+                                    <span class="error dsp-none">Enter the name</span>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label for="ftaddress" class="form-label">Address</label>
+                                    <textarea name="ftaddress" class="form-control" id="ftaddress" rows="3" autocomplete="off"></textarea>
+                                    <span class="error dsp-none">Enter the Address</span>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <label for="ftmob" class="form-label">Contact no</label>
+                                    <input name="ftmob" type="text" class="form-control" id="ftmob" autocomplete="off"
+                                        onkeypress="return isNumber(event)">
+                                    <span class="error dsp-none">Enter the Contact no</span>
+                                </div>
+                                <div class="col-md-3 mb-2">
+                                    <label for="ftqty" class="form-label">QTY</label>
+                                    <input name="ftqty" type="text" class="form-control" id="ftqty">
+                                    <span class="error dsp-none">Enter the QTY</span>
+                                </div>
+                                <div class="col-md-3 mb-4">
+                                    <label for="ftproductname" class="form-label">Product name</label>
+                                    <input name="ftproductname" type="text" class="form-control" id="ftproductname">
+                                    <span class="error dsp-none">Enter the Product name</span>
+                                </div>
+                                <div class="col-md-3 mb-2">
+                                    <label for="ftorderPrice" class="form-label">Order Price</label>
+                                    <input name="ftorderPrice" type="text" class="form-control" id="ftorderPrice" autocomplete="off">
+                                    <span class="error dsp-none">Enter Order Price</span>
+                                </div>
+                                <div class="col-md-12 mb-3">
+                                    <button class="btn btn-primary col-6 mr-2 submitBtn w-100" type="submit"
+                                        id="ftSubBtn" disabled>Submit</button>
+                                </div>
+                            </div>
+                            <!-- <div class="row mb-3">
+                                <div class="col-12">
+                                    <button class="btn btn-warning w-100 d-none" id="ftpdfBtn">PDF</button>
+                                </div>
+                            </div> -->
+                        </div>
+                    </form>
+                    <div id="orderManul">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <a href="./directmessage.html">hii</a>
+</body>
+<!-- <script src="./js/html2canva.js"></script> -->
+<script src="./js/downloadlib.js"></script>
+<script src="./js/js.js"></script>
+
+</html>
