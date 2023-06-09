@@ -137,8 +137,8 @@ function genratePdf(data) {
         <div class="container">
             <div class="row">
                 <div class="col-6 border-end border-dark">
-                    <p class="f-700 cust-name mt-3 mb-2">${data.username}</p>
-
+                    <p class="f-700 cust-name mt-2 mb-2">TO ,</p>
+                    <p class="f-700 cust-name mt-2 mb-2">${data.username}</p>
                     <p class="mb-10 address"><span class="f-700">Address : </span>${data.address}</p>
                     <p class="mb-10"><span class="f-700">Contact : </span>${data.mob}</p>
 
