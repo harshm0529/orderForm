@@ -5,6 +5,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+p{
+    margin: 0;
+}
+
 .form-control:disabled,
 .form-control[readonly] {
     background-color: #e9ecef;
