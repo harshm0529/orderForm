@@ -197,7 +197,7 @@ function genrateFtPdf(data) {
     <div class="scroll mt-5" id="ftpdfgenrate">
     <div class="orderForm">
         <div class="p-4">
-        <img src="imglogo.jpg" alt="" class="logo">
+        <img src="logo.jpg" alt="" class="logo">
             <b class="mb-2 d-block fttitle">TO,</b>
             <div class="row">
                 <div class="col-2">Name:</div>
